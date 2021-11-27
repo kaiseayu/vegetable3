@@ -1,0 +1,180 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+    /* 共通部分 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: serif;
+    line-height: 1.7;
+}
+    
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* header */
+/* .logo {
+  width: 210px;
+  margin-top: 14px;
+  position: relative;
+  z-index: 1;
+}
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.main-nav a {
+  color: white;
+}
+
+.main-nav a:hover {
+  color: #0bd;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  position: relative;
+  z-index: 1;
+} */
+
+
+/* footer */
+footer {
+  background: #432;
+  text-align: center;
+  padding: 26px 0;
+  margin-top: 50px;
+  }
+  
+footer p {
+  color: white;
+  font-size: 0.875rem;
+  } 
+
+
+/* * {
+margin: 0;
+padding: 0;
+}
+
+
+header {
+position: fixed;
+height: 60px;
+width: 100%;
+background-color:white;
+
+display: flex;
+align-items: center;
+}
+
+.header-logo {
+margin-left: 5%;
+
+font-family: Serif;
+font-size: 18px;
+color: black;
+}
+
+.top-page {
+background-image: url('../static/top-image2.jpg');
+background-size: cover;
+width: 100%;
+height:1000px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+    
+h2 {
+font-family: Serif;
+font-size: 18px;
+color: white;
+}
+
+.main {
+height:230px;
+font-family: Serif;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+p {
+margin-bottom: 70px;
+
+font-size: 18px;
+}
+
+label {
+    color: white;  
+    background-color: red;
+    padding: 6px;
+    border-radius: 12px;
+  }
+
+
+footer {
+height: 100px;
+background: #c3c7c3;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footer-logo {
+font-family: Serif;
+font-size: 18px;
+color: #000000;
+}
+ */

@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: serif;
+    line-height: 1.7;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+/* header */
+.big-bg {
+    background-color: cornsilk;
+}
+
+.logo {
+    width: 210px;
+    margin-top: 14px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: black;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.page-title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+
+/* title */
+#result {
+    background-image: url('./green-onions.jpg');
+    height: 270px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#result .page-title {
+    text-align: center;
+}
+
+#result p {
+    text-align: center;
+}
+
+/* レシピ */
+.grid {
+    /* width: 80%; */
+    display: grid;
+    /* gap: 26px; */
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+    /* margin-left: 5%; */
+    /* justify-content: center; */
+}
+
+.list {
+    position: relative;
+    height: 270px;
+    width: 70%;
+    border-radius: 0px;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 20%);
+    background: #FFF;
+    /* padding: 1.5%; */
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+figure {
+    /* display: block; */
+    /* margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+} 
+
+.list li {
+    /* display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.list a {
+    color: black;
+}
+
+.list a:hover {
+    text-decoration: none;
+}
+
+/* 栄養素 */
+/* .secound-block {
+    text-align: center;
+} */
+
+.nutrition-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nutrition-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5%;
+}
+
+.nutrition-name {
+    display: block;
+    margin-bottom: 5%;
+}
+.nutrition-name span {
+    display: block;
+    margin-bottom: 1.5%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user-upload {
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+.predict_name {
+    font-family: serif;
+} 
+
+/* footer */
+footer {
+    width: 100%;
+    background: rgb(241, 241, 241);
+    text-align: center;
+    padding: 26px 0;
+    margin-top: 50px;
+    }
+    
+footer p {
+    color: rgb(61, 61, 61);
+    font-size: 0.875rem;
+    } 

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <title>ベジかわ - レシピ検索</title>
+    <meta charset="utf-8"/>
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <link rel='stylesheet' href='../static/index.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+    
+<body>
+    <div id='recipe' class='big-bg'>
+        <header class='page-header wrapper'>
+            <h1 class='logo'>ベジかわ</h1>
+            <nav>
+                <ul class='main-nav'>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/recipe">レシピ検索</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class='wrapper'>
+            <h2 class='page-title'>レシピ検索</h2>  
+        </div><!-- wrapper-->
+    </div>
+
+    <div class='recipe-contents wrapper'>
+        <header class='post-info'>
+            <h2 class='post-title'>あなたが選択した野菜の、<br>普段なら捨ててしまう部分を使用したレシピを提案します。</h2>
+        </header>
+        <div class='recipe-main-contents'>
+            <h3>画像を送信してください。</h3>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class='custom-file'>
+                    <label>
+                        <span class='filelabel' title="ファイルを選択">
+                            <!-- <img src='../static/camera.jpg' width='32' height="32"> -->
+                            Upload
+                        </span>
+                        <input type="file" id='upload_file' name='upload_file' multiple='multiple'>
+                    </label>
+                    <p>選択されていません</p>
+                    <script>$('input').on('change', function () {
+                        var file = $(this).prop('files')[0];
+                           $('p').text(file.name);
+                        });
+                    </script>
+                </div>
+                <div class='custom-file-submit'>
+                    <label>
+                        <span class='filelabel' title='送信'>
+                            <!-- <img src='../static/submit.jpg' width="32" height="32"> -->
+                            Submit
+                        </span>
+                        <input type="submit" id="upload_file_submit" value='sumbit'>
+                    </label>
+                </div> 
+            </form>
+        </div><!-- recipe-contents -->
+    </div>
+
+
+    <footer>
+        <div class='wrapper'>
+            <p><small>&copy; 2021 A.KAISE</small></p>
+        </div>
+    </footer>
+</body>
+</html>
