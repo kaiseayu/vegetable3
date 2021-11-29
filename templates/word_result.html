@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <title>ベジゼロ</title>
+    <meta charset="utf-8"/>
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <link rel='stylesheet' href='../static/result.css'>
+</head>
+
+<body>
+    <div id='word-result' class='big-bg'>
+        <header class='page-header wrapper'>
+            <h1 class='logo'>ベジゼロ</h1>
+            <nav>
+                <ul class='main-nav'>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/recipe">レシピ検索</a></li>
+                    <li><a href="/word">取り組み紹介</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class='result-content wrapper'>
+            <h2 class='page-title'>取り組み紹介</h2>
+            <!-- <p>今日から始めるフードロス対策</p> -->
+        </div>
+    </div>
+
+    <div class='secound-block'>
+        <!-- <p class='nutrition-title'>{{food_name}}に含まれる栄養素</p> -->
+        <div class='word-container'>
+            <div class='word'>
+                {% if number == 0 %}          
+                <p class='word-name'>
+                    <span>VEGHEET（ベジート）</span><br>
+                    <img src='../static/result_0.jpg'><br>
+                    100％植物性、国際基準の安全性を誇る規格外野菜を使用した野菜シートです。<br>
+                    食材を敷いて焼いたり、巻いて食べたりといったように多様な用途があります。<br>
+                    <br>
+                    今まで廃棄されていた規格外野菜をペースト状にして使用することで食品ロス削減に貢献できるほか、<br>
+                    定価で廃棄野菜を買い取ることで農家や地域の雇用支援にも貢献しています。
+                </p>
+                <div class='btn01'>
+                    <a href='https://www.vegheet.jp/'>VEGHEET</a>
+                </div>
+
+                {% elif number == 1 %}
+                <p class='word-name'>
+                    <span>Purée Project（千代田組）</span><br>
+                    <img src='../static/result_1.jpg'><br>
+                    大手建設業の千代田組が、「廃棄される農作物を減らし、農家さんに少しでも貢献したい」<br>
+                    という思いから規格外野菜の活用したピューレプロジェクトを始めました。<br>
+                    農家の方の多くの方の元へ届けたいという思いを叶える取り組みを行っています。<br>
+                    <br>
+                    素材本来のおいしさを引き出す最新の加熱殺菌技術を採用し、<br>
+                    純度100％のピューレを作り上げるコンテナ型プラントを開発。<br>
+                    味と安全にこだわって長期保存と保存料・添加物ゼロを実現しています。
+                </p>
+                <div class='btn01'>
+                    <a href='https://www.chiyodagumi.co.jp/pureeproject/'>Purée Project</a>
+                </div>
+                
+
+                {% elif number == 2 %}
+                <p class='word-name'>
+                    <span>みためとあじはちがう店</span><br>
+                    <img src='../static/result_2.jpg'><br>
+                    規格外の野菜や果物を取り扱って販売している「みためとあじはちがう店」（通称：みたあじ）という通販サイト。<br>
+                    みためは凸凹しているけど食べるといつもの野菜と同じ味という意味で名づけられたそうです。<br>
+                    <br>
+                    サイトで販売されている商品はおまかせパックの2000円とおまかせパック4000円の2種類のみ。<br>
+                    中身の野菜や果物は10種類以上。毎日市場に出回る品が変わるので中身はその日のおまかせです。<br>
+                    規格外野菜を消費者に食べてもらって、形が少々悪くても美味しく食べられるという認識が広まってほしいという願いが込められています。
+                </p>
+                <div class='btn01'>
+                    <a href='https://mitaaji.com/'>みためとあじはちがう店</a>
+                </div>
+
+                {% else %}
+                <p class='word-name'>
+                    <span>おやさいクレヨン</span><br>
+                    <img src='../static/result_3.jpg'><br>
+                    お米と野菜からクレヨンを作っています。<br>
+                    小さなお子様も安心して遊べるように、米ぬかから採れた米油とライスワックスをベースに、<br>
+                    収穫の際に捨てられてしまう野菜の外葉などを原材料に着色しています。<br>
+                    <br>
+                    グラフィックデザイナーとして仕事と子育てを両立していた木村尚子氏が、<br>
+                    夕飯の支度をする中で野菜が持つ色の鮮やかさを再認識して、「野菜の色で絵を描いたら美味しそう」と思いつき、<br>
+                    その後、規格外などの理由で廃棄される野菜が多いことを知ったことで、<br>
+                    木村は青森県産の廃棄される野菜をリユースできないか考えるようになったことかr生まれました。
+                </p>
+                <div class='btn01'>
+                    <a href='https://oyasai-crayon.com/'>おやさいクレヨン</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class='wrapper'>
+            <small>&copy; 2021 A.KAISE</small>
+        </div>
+    </footer>
+</body>
+</html>

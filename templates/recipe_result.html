@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <title>ベジゼロ - おすすめレシピ</title>
+    <meta charset="utf-8"/>
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <link rel='stylesheet' href='../static/result.css'>
+</head>
+
+<body>
+    <div id='result' class='big-bg'>
+        <header class='page-header wrapper'>
+            <h1 class='logo'>ベジゼロ</h1>
+            <nav>
+                <ul class='main-nav'>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/recipe">レシピ検索</a></li>
+                    <li><a href="/word">取り組み紹介</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class='result-content wrapper'>
+            <h2 class='page-title'>おすすめレシピ</h2>
+            <p>{{ food_name }}を使用した今週のおすすめレシピ3選</p>
+        </div>
+    </div>
+
+    <div class='wrapper grid'>
+        <div class='list'>
+            <figure>
+                <img src='{{ img_list[0] }}' style='height: 150px; width: 200px'>
+            </figure>
+            <li><a href='{{ url_list[0] }}'>{{ name_list[0] }}</a></li>
+        </div>
+
+        <div class='list'>
+            <figure>
+                <img src='{{ img_list[1] }}' style='height: 150px; width: 200px'>
+            </figure>
+            <li><a href='{{ url_list[1] }}'>{{ name_list[1] }}</a></li>
+        </div>
+
+        <div class='list'>
+            <figure>
+                <img src='{{ img_list[2] }}' style='height: 150px; width: 200px'>
+            </figure>
+            <li><a href='{{ url_list[2] }}'>{{ name_list[2] }}</a></li>
+        </div>
+    </div>
+
+    <div class='secound-block'>
+        <p class='nutrition-title'>{{food_name}}に含まれる栄養素</p>
+        <div class='nutrition-container'>
+            <!-- 相対パス -->
+            <img src="../static/user_upload/{{ user_upload }}" style="margin-top: 30px; vertical-align: bottom; width: 200px;" class='user-upload' >
+
+            <div class='nutrition'>
+                {% if predict_name == 'ニンジン' %}
+                <p class='nutrition-name'>
+                    <span>β-カロテン</span>
+                    体内でビタミンCに変換されます。<br>
+                    粘膜や皮膚、免疫機能を正常に保ったり、視力を維持するために必要不可欠な成分です。
+                </p>
+                <p class="nutrition-name">
+                    <span>カリウム</span>
+                    体内のナトリウムを排出する作用があるため、<br>
+                    塩分の摂り過ぎを調節する上で重要な栄養素です。
+                </p>
+
+                {% elif predict_name == 'タマネギ' %}
+                <p class='nutrition-name'>
+                    <span>ケルセチン</span>
+                    普段私たちが食べている実の部分の30倍以上含まれています。<br>
+                    ポリフェノールの一種で、血流を改善する効果や動脈硬化を予防する効果などがあります。
+                </p>
+                <p class="nutrition-name">
+                    <span>食物繊維</span>
+                    不溶性のものと水溶性のものがありますが、タマネギの皮にはどちらも含まれています。<br>
+                    不溶性食物繊維は、水分を吸収して膨らみ腸を刺激し、便通を促します。<br>
+                    水溶性食物繊維は、糖質の吸収を緩やかにしたり、コレステロールの排出を促進したりする働きがあります。
+                </p>
+
+                {% elif predict_name == 'レモン' %}
+                <p class='nutrition-name'>
+                    <span>ビタミンC・E</span>
+                    果汁よりも多く含まれています。<br>
+                    どちらも抗酸化作用が高く、紫外線によるシミ・シワを防ぎ、肌細胞を酸化から守ります。
+                </p>
+                <p class='nutrition-name'>
+                    <span>ポリフェノール</span>
+                    血中の脂質を減少させて動脈硬化を防止します。<br>
+                    メタボリックシンドロームや生活習慣病と関わりの深い<br>
+                   血管疾患の予防につながるとされています。
+                </p>
+
+                {% elif predict_name == 'カブ' %}
+                <p class='nutrition-name'>
+                    <span>β-カロテン</span>
+                    体内でビタミンCに変換されます。<br>
+                    粘膜や皮膚、免疫機能を正常に保ったり、視力を維持するために必要不可欠な成分です。
+                </p>
+                <p class='nutrition-name'>
+                    <span>食物繊維</span>
+                    不溶性のものと水溶性のものがありますが、カブの葉にはどちらも含まれています。<br>
+                    不溶性食物繊維は、水分を吸収して膨らみ腸を刺激し、便通を促します。<br>
+                    水溶性食物繊維は、糖質の吸収を緩やかにしたり、コレステロールの排出を促進したりする働きがあります。
+                </p>
+
+                {% else %}
+                <p class='nutrition-name'>
+                    <span>カルシウム</span>
+                    骨や歯の主要な構成成分になるだけでなく、<br>
+                    血液の凝固を促して出血を予防したり、心筋の収縮作用を増し、<br>
+                   筋肉の興奮性を抑える働きもあります。
+                </p>
+                <p class='nutrition-name'>
+                    <span>カリウム</span>
+                    体内のナトリウムを排出する作用があるため、<br>
+                    塩分の摂り過ぎを調節する上で重要な栄養素です。
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class='return'>
+        <a href='/recipe'>他の野菜も試す</a>
+    </div>
+
+    <footer>
+        <div class='wrapper'>
+            <small>&copy; 2021 A.KAISE</small>
+        </div>
+    </footer>
+</body>
+</html>
+   
