@@ -51,11 +51,24 @@ img {
 
 .main-nav a {
     color: white;
+    position: relative;
 }
 
-.main-nav a:hover {
-    color: black;
-}
+.main-nav a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+.main-nav a:hover::after {
+    width: 100%;
+  }
 
 .page-header {
     display: flex;
@@ -80,12 +93,18 @@ img {
     z-index: 1;
 }
 
+.home-content-text {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
 .page-title {
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: normal;
     position: relative;
     z-index: 1;
+
 }
 
 /* 大きな背景画像 */
@@ -113,12 +132,15 @@ img {
 }
 
 #home .page-title {
+    margin-bottom: 80px;
     text-transform: none;
+    line-height: 120%;
+    text-shadow: 2px 2px 7px rgb(68, 68, 68);
 }
 
 /* about */
 #about {
-    background-image: url('./carrots.jpg');
+    background-image: url('./green-onions.jpg');
     height: 270px;
     margin-bottom: 40px;
     color: white;
@@ -128,19 +150,17 @@ img {
     text-align: center;
 }
 
-article {
-    width: 74%;
-}
 
 .post-title {
+    /* text-align: center; */
     font-size: 2rem;
     font-weight: normal;
-    margin-left: 120px;
+    margin-left: 100px;
 }
 
 /* recipe */
 #recipe {
-    background-image: url('./green-onions.jpg');
+    background-image: url('./salad-gef5e524a5_1920.jpg');
     height: 270px;
     margin-bottom: 40px;
     color: white;
@@ -177,7 +197,6 @@ form {
     color: rgb(255, 255, 255);
     border: 1px solid rgb(0, 0, 0);
     padding: 5px 9px;
-    /* display: inline-block; */
     font-weight: 400;
     box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.3);
 }
@@ -208,10 +227,10 @@ form {
     cursor: pointer;
     position: relative;
     top: 2px;
-    /* left: 3px; */
-} 
+}
 
 .custom-file {
+    width: 250px;
     display: flex;
     align-items: center;
     /* justify-content: top; */
@@ -230,6 +249,57 @@ form {
     display: none;
 }
 
+/* word */
+#word {
+    background-image: url('./green-onions.jpg');
+    height: 270px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#word .page-title {
+    text-align: center;
+}
+
+.word-main-contents {
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.word-main-contents h3 {
+    margin-bottom: 30px;
+    transform: scale(1.5, 1.5);
+    font-weight: normal;
+    padding-bottom: 30px;
+}
+
+
+.wordbutton {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 9px;
+    /* display: inline-block; */
+    font-weight: 400;
+    box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.3);
+    transform: scale(1.25, 1.25);
+}
+
+.wordbutton:hover {
+    box-shadow: none;
+    opacity: 0.5;
+    /* border: 1px solid rgb(69, 102, 74); */
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    /* left: 3px; */
+}
+
 /* footer */
 footer {
     position: absolute;
@@ -245,34 +315,3 @@ footer p {
     color: rgb(61, 61, 61);
     font-size: 0.875rem;
     } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .recipe {
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-li a {
-    color: black;
-    margin-right: 15px; */
-/* } */
-
-
-
-
-
-        
